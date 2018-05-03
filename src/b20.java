@@ -21,13 +21,15 @@ public class b20 {
 		products.put("Pizza", 9.99);
 
 		for (String product : products.keySet()) {
-			System.out.println(product + "		" + products.get(product));
+			//System.out.println(product + "		" + products.get(product));
 		}
 		ArrayList<String> orderList = new ArrayList<>();
 		ArrayList<Double> priceList = new ArrayList<>();
 
 		do {
-
+			for (String product : products.keySet()) {
+				System.out.println(product + "		" + products.get(product));
+			}
 			System.out.println("What item would you like to order?");
 			userOrder = scan.nextLine();
 			if (products.containsKey(userOrder)) {
